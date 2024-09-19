@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <h1> Reverse Number Program in Java </h1>
+    <p> 
+   <b> Last Updated</b> : 14 Jul, 2023
+    </p>
+    <hr>
+    <p style="background-color:wheat;padding: 30px;colour:rgb(208.233,99); frount-size:20px;>">
+        <b>In Java,</b> reversing a number means that the digit at the first position should be swapped with the last
+         digit, the second digit will be swapped with the second last digit, and so on till the middle element.
+         <pre></pre>
+        <b>Note:</b>Leading zeros will not be considered after reversing (i.e, After reversing 100 will become 001 ≈ 1).
+
+
+    </p>
+    <h2 style="font-size: larger;">Algorithm for Reversing a Number in Java</h2>
+    <p> To reverse a number following steps should be performed:</p>
+    <pre></pre>
+    <p>
+       1.Take the number’s modulo by 10.
+       <pre></pre>
+       2.Multiply the reverse number by 10 and add modulo value into the reverse number.
+       <pre></pre>
+       3.Divide the number by 10.
+       <pre></pre>
+       4.Repeat above steps until number becomes zero.
+    </p>
+    <h3 style="font-size: larger;">Methods to Reverse a Number in Java</h3>
+    <p> We can reverse a number in Java using three main methods as mentioned below:
+       <pre></pre>
+        
+       1.Using While Loop
+       <pre></pre>
+       2.Using Recursion
+       <pre></pre>
+       3.Using Stringbuilder class</p>
+
+       <h4 style="font-size: larger;">1. Reverse a Number Using the While Loop</h4>
+       <p> Simply apply the steps/algorithm discussed and terminate the loop when the number becomes zero.</p>
+       <h5 style="font-size: large;">Below is the implementation of the above approach:</h5>
+
+       <code>
+        <pre style="background-color: #2be466;padding: 30px;colour:rgb(208.233,99):font-size:20;px;>">
+            // Java program to reverse a number 
+            import java.io.*; 
+            // Driver Class 
+            class GFG { 
+                // Function to reverse the number 
+                static int reverse(int n) 
+                { 
+                    // reversed number 
+                    int rev = 0; 
+                    // remainder 
+                    int rem; 
+            
+                    while (n > 0) { 
+                        rem = n % 10; 
+                        rev = (rev * 10) + rem; 
+                        n = n / 10; 
+                    } 
+            
+                    return rev; 
+                } 
+            
+                // Driver Function 
+                public static void main(String[] args) 
+                { 
+                    int n = 4526; 
+            
+                    System.out.print("Reversed Number is "
+                                    + reverse(n)); 
+                } 
+            }
+            
+        </pre>
+       </code>
+
+       <hr>
+
+       <h6 style="background-color: rgb(161, 163, 158);padding: 40px;rgb(208.233,99); font-size:20px; border: radius 3px;>">output
+        <pre></pre>
+        Reversed Number is 6254
+
+       </h6>
+      
+
+
+</body>
+</html>
